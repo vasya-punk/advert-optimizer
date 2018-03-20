@@ -55,6 +55,8 @@ public class OptimizationJob {
                 int publisherId = publisherEvents.getKey();
 
                 logger.debug(publisherId + " = " + cntSource + "%" + cntMeasure + "|" + ratio + "=" + pass);
+                
+                // TODO: Add this publishers to email notification list
                 if (pass && blackList.containsKey(publisherId)) {
                     blackList.remove(publisherId);
                 } else if (!pass) {
